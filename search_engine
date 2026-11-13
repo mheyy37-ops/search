@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>csc</title>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="val">
+            <button onclick="hop()">search</button>
+        </div>
+
+        <ol id="info">
+            <li>csc</li>
+            <li>ssc</li>
+            <li>gh</li>
+        </ol>
+    </body>
+
+    <script>
+        function hop()
+        {
+            a = document.getElementById("info");
+            b = a.getElementsByTagName("li");
+            c = document.getElementById("val");
+            c = c.value;
+
+            for(let i=0; i<b.length; i++)
+            {
+                if(c == b[i].innerHTML)
+                {
+                    b[i].style.display = "list-item";
+                }
+                else
+                {
+                    b[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</html>
